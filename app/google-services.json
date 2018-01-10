@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1074591030865",
+    "firebase_url": "https://wififingerprinting-53e78.firebaseio.com",
+    "project_id": "wififingerprinting-53e78",
+    "storage_bucket": "wififingerprinting-53e78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074591030865:android:3fec938f3c366f10",
+        "android_client_info": {
+          "package_name": "com.example.acer.wififingerprinting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074591030865-mij910je6krm4j403ive21ot40682d81.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acer.wififingerprinting",
+            "certificate_hash": "49f86efb6d5e9784bb113e9552127d168d6a13f9"
+          }
+        },
+        {
+          "client_id": "1074591030865-6or8uikbbsb0tnbmf2c0b340khnrpb3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWNc5aDWly475JgTSJhwflnlTomDo8MMI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074591030865-6or8uikbbsb0tnbmf2c0b340khnrpb3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
