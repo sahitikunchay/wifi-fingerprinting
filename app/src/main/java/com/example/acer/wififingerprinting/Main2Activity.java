@@ -58,9 +58,9 @@ public class Main2Activity extends AppCompatActivity {
     private void writeNewDBBean() {
         String locationLabel = locLabelET.getText().toString();
         if(crowdedCB.isChecked()) {
-            mdbInstaceBean = new dbInstanceBean(mFingerPrintBean.getMacAddress(), mFingerPrintBean.getSSID(), mFingerPrintBean.getLevel(), 1, locationLabel);
+            mdbInstaceBean = new dbInstanceBean(mFingerPrintBean.getMacAddress(), mFingerPrintBean.getSSID(), mFingerPrintBean.getLevel(), 1, locationLabel, String.valueOf(System.currentTimeMillis()));
         } else {
-            mdbInstaceBean = new dbInstanceBean(mFingerPrintBean.getMacAddress(), mFingerPrintBean.getSSID(), mFingerPrintBean.getLevel(), 0, locationLabel);
+            mdbInstaceBean = new dbInstanceBean(mFingerPrintBean.getMacAddress(), mFingerPrintBean.getSSID(), mFingerPrintBean.getLevel(), 0, locationLabel, String.valueOf(System.currentTimeMillis()));
         }
         mDatabase.push().setValue(mdbInstaceBean);
         startActivity(mIntent);

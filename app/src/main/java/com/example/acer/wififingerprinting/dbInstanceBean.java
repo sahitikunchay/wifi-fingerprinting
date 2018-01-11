@@ -10,13 +10,15 @@ public class dbInstanceBean {
     int level;
     int crowded;
     String locationLabel;
+    String time;
 
-    public dbInstanceBean(String pMacAddress, String pSSID, int pLevel, int pCrowded, String pLocationLabel) {
+    public dbInstanceBean(String pMacAddress, String pSSID, int pLevel, int pCrowded, String pLocationLabel, String pTime) {
         macAddress = pMacAddress;
         SSID = pSSID;
         level = pLevel;
         crowded = pCrowded;
         locationLabel = pLocationLabel;
+        time = pTime;
     }
 
     public String getMacAddress() {
@@ -59,6 +61,14 @@ public class dbInstanceBean {
         locationLabel = pLocationLabel;
     }
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String pTime) {
+        time = pTime;
+    }
+
     @Override
     public boolean equals(Object pO) {
         if (this == pO) return true;
@@ -66,16 +76,17 @@ public class dbInstanceBean {
 
         dbInstanceBean that = (dbInstanceBean) pO;
 
-        if (!macAddress.equals(that.macAddress)) return false;
-        if (!SSID.equals(that.SSID)) return false;
-        return locationLabel.equals(that.locationLabel);
+        if (macAddress != null ? !macAddress.equals(that.macAddress) : that.macAddress != null)
+            return false;
+        if (SSID != null ? !SSID.equals(that.SSID) : that.SSID != null) return false;
+        return locationLabel != null ? locationLabel.equals(that.locationLabel) : that.locationLabel == null;
     }
 
     @Override
     public int hashCode() {
-        int result = macAddress.hashCode();
-        result = 31 * result + SSID.hashCode();
-        result = 31 * result + locationLabel.hashCode();
+        int result = macAddress != null ? macAddress.hashCode() : 0;
+        result = 31 * result + (SSID != null ? SSID.hashCode() : 0);
+        result = 31 * result + (locationLabel != null ? locationLabel.hashCode() : 0);
         return result;
     }
 
@@ -87,6 +98,7 @@ public class dbInstanceBean {
                 ", level=" + level +
                 ", crowded=" + crowded +
                 ", locationLabel='" + locationLabel + '\'' +
+                ", time='" + time + '\'' +
                 '}';
     }
 }
